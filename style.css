@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-   width: 100%;
+    width: 100%;
+    font-family: Martel, serif;
 }
 
-
 html {
-    font-size: Inter, sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 40px;
     background-color: rgb(0, 57, 110);
     width: 100%;
-    
+    padding: 20px;
 }
 
 .logob {
@@ -33,10 +34,12 @@ nav {
 .logo {
     font-size: 40px;
     color: white;
+    font-family: Roboto, sans-serif;
 }
 
 footer {
-    background-color: rgb(0, 57, 110)
+    background-color: rgb(0, 57, 110);
+    padding: 40px 20px;
 }
 
 h1 {
@@ -44,11 +47,12 @@ h1 {
     font-size: 50px;
     font-weight: 900;
     padding: 20px;
-    padding-left: 40px;
+    text-align: center;
 }
 
 hr {
     width: 50%;
+    margin: 0 auto;
 }
 
 h2 {
@@ -57,52 +61,50 @@ h2 {
     font-size: 24px;
     letter-spacing: 0.5px;
     padding: 20px;
-    padding-left: 40px;
-    padding-bottom: 60px;
+    text-align: center;
 }
 
 p {
     font-size: 20px;
-    font-family: Martel, serif;
     font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 400px;
-}
-
-.bsb {
-    width: 760px;
-    display: flex;
-    padding-left: 400px;
-}
-
-.oportunidade {
-    padding: 10px;
-    background-color: rgb(0, 57, 110);
-    color: white;
-    text-transform: uppercase;
-    margin-left: 40px;
-}
-
-table {
-    padding: 60px;
-    padding-left: 200px;
-}
-
-.imas {
-    width: 300px;
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .fo {
     font-size: 20px;
-    font-family: Martel, serif;
     font-weight: 400;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bsb {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 60px 400px;
+    padding: 20px;
+}
+
+.oportunidade {
+    padding: 10px 20px;
+    background-color: rgb(0, 57, 110);
     color: white;
+    text-transform: uppercase;
+    margin: 20px auto;
+    text-align: center;
+    display: inline-block;
+}
+
+table {
+    padding: 40px 20px;
+    margin: 0 auto;
 }
 
 .imagens {
@@ -110,7 +112,8 @@ table {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin: 80px;
+    flex-wrap: wrap;
+    margin: 40px 20px;
 }
 
 .imas {
@@ -120,4 +123,39 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    h1, h2, .logo {
+        font-size: 1.8rem;
+    }
+
+    .imas {
+        width: 90%;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bsb {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .oportunidade {
+        margin-left: 100px;
+    }
+
+    p, .fo {
+        padding: 20px;
+    }
+
+    table {
+        padding: 20px;
+    }
 }
